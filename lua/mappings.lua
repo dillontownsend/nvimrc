@@ -1,4 +1,5 @@
-vim.opt.relativenumber = true
+vim.cmd(':set number relativenumber')
+vim.cmd(':set nu rnu')
 vim.wo.signcolumn = 'yes'
 vim.g.mapleader = ' '
 

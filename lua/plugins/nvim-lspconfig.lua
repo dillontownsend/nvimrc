@@ -8,6 +8,13 @@ return {
 		lspconfig.lua_ls.setup({
 			capabilities = capabilities
 		})
+		lspconfig.hls.setup({
+			capabilities = capabilities,
+			haskell = {
+				-- cabalFormattingProvider = "cabalfmt",
+				formattingProvider = "fourmolu"
+			}
+		})
 
 		local opts = {}
 

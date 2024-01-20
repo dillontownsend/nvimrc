@@ -1,12 +1,15 @@
 return {
 	"nvimtools/none-ls.nvim",
 	config = function()
-		local null_ls = require('null-ls')
+		local null_ls = require("null-ls")
 
 		null_ls.setup({
-			null_ls.builtins.formatting.stylua
+			sources = {
+				null_ls.builtins.formatting.stylua,
+				null_ls.builtins.formatting.fourmolu,
+			},
 		})
 
-		vim.keymap.set('n', '<leader>fm', vim.lsp.buf.format, {})
-	end
+		vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, {})
+	end,
 }
