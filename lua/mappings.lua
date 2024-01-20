@@ -3,6 +3,10 @@ vim.wo.signcolumn = 'yes'
 vim.g.mapleader = ' '
 
 
+-- clear highlights
+vim.keymap.set('n', '<Esc>', '<cmd> noh <CR>', {})
+
+
 -- switch between windows
 vim.keymap.set('n', '<C-l>', '<C-w>l', {})
 vim.keymap.set('n', '<C-h>', '<C-w>h', {})
